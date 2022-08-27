@@ -1,7 +1,7 @@
 import pyarrow.dataset as ds
 import duckdb
 import json
-lineitem = ds.dataset("gs://duckddelta/delta2",format="parquet", partitioning="hive")
+lineitem = ds.dataset("gs://xxxxx/lineitem",format="parquet", partitioning="hive")
 con = duckdb.connect()
 def Query(request):
     SQL = request.get_json().get('name')

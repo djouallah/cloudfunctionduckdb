@@ -1,0 +1,3 @@
+pandas
+duckdb
+google.cloud.storage

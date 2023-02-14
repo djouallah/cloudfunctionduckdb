@@ -33,5 +33,5 @@ def Query(request):
     try :
        df = duckdb.execute(SQL).df()
     except Exception as er:
-       df=pd.DataFrame(er)
+       df = pd.DataFrame([{'error':er}])
     return json.dumps(df.to_json(orient="records")), 200, {'Content-Type': 'application/json'}
